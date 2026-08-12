@@ -111,12 +111,13 @@ export function CardLayoutEditor({
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
-        className="relative aspect-[1834/1302] w-full touch-none overflow-hidden rounded-2xl border-2 border-slate-200 bg-amber-50 select-none"
+        className="relative aspect-[1302/1834] w-full touch-none overflow-hidden rounded-2xl border-2 border-slate-200 bg-amber-50 select-none"
         style={
           backgroundImageUrl
             ? {
                 backgroundImage: `url(${backgroundImageUrl})`,
-                backgroundSize: "cover",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
               }
             : undefined
