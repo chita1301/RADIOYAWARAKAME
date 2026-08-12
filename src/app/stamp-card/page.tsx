@@ -33,7 +33,7 @@ export default async function StampCardPage() {
 
       {hasCustomLayout ? (
         <div
-          className="relative aspect-[1302/1834] w-full overflow-hidden rounded-3xl border-4 border-amber-200 bg-white shadow-md"
+          className="relative aspect-[1302/1834] w-full overflow-hidden rounded-3xl border-4 border-amber-200 bg-white shadow-md sm:max-w-md"
           style={
             layout.backgroundImageUrl
               ? {

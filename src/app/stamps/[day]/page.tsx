@@ -46,7 +46,7 @@ export default async function StampDetailPage({
             <img
               src={stamp.image_url}
               alt={stamp.name}
-              className="h-48 w-48 rounded-full object-cover shadow-md"
+              className="h-48 w-48 object-contain shadow-md"
             />
           )}
           <h1 className="text-xl font-bold text-sky-900">{stamp.name}</h1>
