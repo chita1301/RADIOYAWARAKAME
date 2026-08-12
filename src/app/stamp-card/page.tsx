@@ -33,7 +33,7 @@ export default async function StampCardPage() {
 
       {hasCustomLayout ? (
         <div
-          className="relative aspect-[3/4] w-full max-w-sm overflow-hidden rounded-3xl border-4 border-amber-200 bg-white shadow-md"
+          className="relative aspect-[1834/1302] w-full overflow-hidden rounded-3xl border-4 border-amber-200 bg-white shadow-md"
           style={
             layout.backgroundImageUrl
               ? {
@@ -54,7 +54,7 @@ export default async function StampCardPage() {
             return (
               <div
                 key={day}
-                className="absolute flex aspect-square items-center justify-center overflow-hidden rounded-full"
+                className="absolute flex aspect-square items-center justify-center overflow-hidden"
                 style={{
                   left: `${pos.xPct}%`,
                   top: `${pos.yPct}%`,
@@ -67,10 +67,10 @@ export default async function StampCardPage() {
                   <img
                     src={stamp.image_url}
                     alt={stamp.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 ) : (
-                  <div className="h-full w-full rounded-full border-2 border-dashed border-sky-200 bg-sky-50/80" />
+                  <div className="h-full w-full border-2 border-dashed border-sky-200 bg-sky-50/80" />
                 )}
               </div>
             );
@@ -104,14 +104,14 @@ export default async function StampCardPage() {
               return (
                 <div
                   key={day}
-                  className="flex aspect-square flex-col items-center justify-center overflow-hidden rounded-full border-2 border-dashed border-sky-200 bg-sky-50"
+                  className="flex aspect-square flex-col items-center justify-center overflow-hidden border-2 border-dashed border-sky-200 bg-sky-50"
                 >
                   {unlocked && stamp && stamp.image_url ? (
                     // eslint-disable-next-line @next/next/no-img-element -- Supabase Storageの任意の公開URLを表示するため
                     <img
                       src={stamp.image_url}
                       alt={stamp.name}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   ) : (
                     <span className="text-xs text-sky-300">{day}</span>

@@ -111,7 +111,7 @@ export function CardLayoutEditor({
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
-        className="relative aspect-[3/4] w-full max-w-sm touch-none overflow-hidden rounded-2xl border-2 border-slate-200 bg-amber-50 select-none"
+        className="relative aspect-[1834/1302] w-full touch-none overflow-hidden rounded-2xl border-2 border-slate-200 bg-amber-50 select-none"
         style={
           backgroundImageUrl
             ? {
@@ -129,7 +129,7 @@ export function CardLayoutEditor({
             <div
               key={stamp.id}
               onPointerDown={handlePointerDown(stamp.id)}
-              className={`absolute flex aspect-square cursor-grab items-center justify-center overflow-hidden rounded-full border-2 bg-white/90 shadow ${
+              className={`absolute flex aspect-square cursor-grab items-center justify-center overflow-hidden border-2 bg-white/90 shadow ${
                 selected === stamp.id ? "border-sky-500" : "border-white"
               }`}
               style={{
@@ -144,7 +144,7 @@ export function CardLayoutEditor({
                 <img
                   src={stamp.imageUrl}
                   alt={stamp.name}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                   draggable={false}
                 />
               ) : (
