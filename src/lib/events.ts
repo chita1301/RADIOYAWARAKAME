@@ -35,3 +35,23 @@ export function getCurrentDayNumber(event: EventRow): number | null {
   if (dayNumber < 1 || dayNumber > event.num_days) return null;
   return dayNumber;
 }
+
+/** イベントの開始日・終了日を変更する。日数(num_days)は日付の差分から自動計算する */
+export async function updateEventDates(
+  eventId: string,
+  startDate: string,
+  endDate: string
+): Promise<void> {
+  const numDays = daysBetween(startDate, endDate) + 1;
+  if (numDays < 1) {
+    throw new Error("終了日は開始日以降の日付にしてください");
+  }
+
+  const supabase = getSupabaseAdmin();
+  const { error } = await supabase
+    .from("events")
+    .update({ start_date: startDate, end_date: endDate, num_days: numDays })
+    .eq("id", eventId);
+
+  if (error) throw error;
+}

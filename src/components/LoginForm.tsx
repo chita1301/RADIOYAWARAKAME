@@ -13,6 +13,9 @@ export function LoginForm() {
       <label htmlFor="loginName" className="text-center text-base font-medium text-sky-900">
         あなたの名前を入力してください
       </label>
+      <p className="text-center text-xs text-sky-700">
+        名前はログインに使用されます。ログイン名はディスコードで使用しているものを推奨します。個人情報は入力しないでください。
+      </p>
       <input
         id="loginName"
         name="loginName"
@@ -20,7 +23,7 @@ export function LoginForm() {
         required
         maxLength={50}
         autoComplete="off"
-        placeholder="例: 峰雪ちた"
+        placeholder="例: ちた"
         className="rounded-full border-2 border-sky-200 bg-white px-5 py-3 text-center text-lg text-sky-950 shadow-sm outline-none placeholder:text-sky-300 focus:border-sky-400"
       />
       {state.error && (

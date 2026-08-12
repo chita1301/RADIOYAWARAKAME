@@ -7,6 +7,7 @@ const navItems = [
   { href: "/admin/stamps", label: "スタンプ管理" },
   { href: "/admin/card", label: "カード配置" },
   { href: "/admin/perfect-attendance", label: "皆勤賞管理" },
+  { href: "/admin/event", label: "イベント設定" },
 ];
 
 export function AdminNav() {
