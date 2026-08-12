@@ -8,6 +8,7 @@ const navItems = [
   { href: "/admin/card", label: "カード配置" },
   { href: "/admin/perfect-attendance", label: "皆勤賞管理" },
   { href: "/admin/event", label: "イベント設定" },
+  { href: "/admin/reset", label: "データリセット" },
 ];
 
 export function AdminNav() {
